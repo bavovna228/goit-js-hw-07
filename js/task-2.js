@@ -25,5 +25,25 @@ const images = [
     url:
       'https://images.pexels.com/photos/247376/pexels-photo-247376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     alt: 'Zebras on Zebra',
+   
   },
 ];
+
+const galleryList = document.querySelector('ul.gallery');
+
+const elements = images.map(image => {
+  const listItem = document.createElement('li');
+  const imageElement = document.createElement('img');
+
+  imageElement.src = image.url;
+  imageElement.alt = image.alt;
+  imageElement.width = 360; 
+  imageElement.height = 300;
+
+  listItem.append(imageElement);
+  return listItem;
+});
+
+galleryList.append(...elements);
+
+
