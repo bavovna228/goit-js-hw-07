@@ -30,14 +30,20 @@ ul {
   padding: 0;
 }
 
-li {
+.item {
+  background-color: #F6F6FE;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 10px;
+  color: #333;
+}
+.item li {
   border: 1px solid #2E2F42;
   border-radius: 5px;
   margin: 5px 0;
   padding: 10px;
   color: #333;
 }
-
 
 
 .gallery {
@@ -48,5 +54,35 @@ li {
     list-style: none;
 }
 
+input {
+  width: 360px;
+  height: 40px;
+  border: 1px solid #808080;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  
+}
+
+.login-form label{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  
+}
 
 
+color: var(--light-color);
+background-color: var(--primary-brand);
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.04em;
+min-width: 169px;
+border: none;
+padding: 16px 32px;
+display: block;
+margin: 0 auto;
+transition-property: background-color;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
