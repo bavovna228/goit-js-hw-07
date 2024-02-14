@@ -4,9 +4,13 @@ function getRandomHexColor() {
     .padStart(6, '0')}`;
 }
 
+const controlsBox = document.querySelector('#controls');
+controlsBox.classList.add('js-list');
+
 function createBoxes(amount) {
   const boxesContainer = document.querySelector('#boxes');
-
+  boxesContainer.innerHTML = '';
+  boxesContainer.classList.add('js-boxes');
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
     box.classList.add('box');
@@ -14,11 +18,12 @@ function createBoxes(amount) {
     box.style.height = `${30 + i * 10}px`;
     box.style.backgroundColor = getRandomHexColor();
     boxesContainer.appendChild(box);
+    
   }
 }
 
 function destroyBoxes() {
-  const boxesContainer = document.getElementById('boxes');
+  const boxesContainer = document.querySelector('#boxes');
   boxesContainer.innerHTML = '';
 }
 
@@ -31,3 +36,6 @@ document.querySelector('button[data-create]').addEventListener('click', function
     input.value = '';
   } 
 });
+
+document.querySelector('button[data-destroy]').addEventListener('click', destroyBoxes);
+
